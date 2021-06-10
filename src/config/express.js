@@ -1,9 +1,11 @@
 const express = require("express");
+const morgan = require("morgan");
 const compress = require("compression");
 const cors = require("cors");
 const helmet = require("helmet");
 const bodyParser = require("body-parser");
 const routes = require("../api/routes/v1");
+const { logs } = require("./vars");
 
 /**
  * Express instance
@@ -14,6 +16,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // request logging. dev: console | production: file
+app.use(morgan(logs));
 
 // gzip compression
 app.use(compress());

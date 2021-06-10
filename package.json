@@ -28,6 +28,10 @@
     "compress": "^0.99.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "helmet": "^4.6.0"
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0",
+    "node-cache": "^5.1.2",
+    "uniqid": "^5.3.0",
+    "winston": "^3.3.3"
   }
 }
