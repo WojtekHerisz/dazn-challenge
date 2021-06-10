@@ -70,14 +70,12 @@ Request body:
 
 \*_xxxxxxxxx - sessionId from POST /v1/session_
 
-The session is stored using node-cache. It is pretty reliable and fast solution but for bigger scale I would think of some non-relational DB.
-
----
-
 - GET /v1/doc - documentation of API. Can be viewed only if previously has been generated. Please see last step of **Installation**
 - GET /v1/status - just simple keepalive endpoint
 
 For the express.js boilerplate I used fragments of my favourite [boilerplate](https://github.com/danielfsousa/express-rest-boilerplate) which has few most important things to start such as _helmet_ for security, logging with _morgan_ and _winston_ etc.
+
+The session is stored using node-cache. It is pretty reliable and fast solution but for bigger scale I would think of some non-relational DB.
 
 ## Scalability
 
@@ -92,6 +90,7 @@ Of course I realize this simple API is not perfect. If I were to develop it furt
 - Of course testing using mocha.js, chai etc. - sorry but there was not much time for this :(
 - Better documentation, maybe some screenshots etc.
 - And few other minor mistakes
+- Maybe hosting on some free plan of Heroku or AWS
 
 ---
 
