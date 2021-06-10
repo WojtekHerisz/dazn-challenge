@@ -24,6 +24,17 @@ app.use(compress());
 // secure apps by setting various HTTP headers
 app.use(helmet());
 
+// to serve static files of api-doc we there is a need to change src headers
+app.use(
+  helmet.contentSecurityPolicy({
+    useDefaults: false,
+    directives: {
+      "default-src": helmet.contentSecurityPolicy.dangerouslyDisableDefaultSrc,
+      "script-src": ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
+    },
+  })
+);
+
 // enable CORS - Cross Origin Resource Sharing
 app.use(cors());
 
