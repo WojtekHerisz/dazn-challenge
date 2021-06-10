@@ -1,0 +1,23 @@
+{
+  "name": "dazn-challenge",
+  "version": "1.0.0",
+  "description": "Dazn Coding Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WojtekHerisz/dazn-challenge.git"
+  },
+  "keywords": [
+    "dazn",
+    "streaming"
+  ],
+  "author": "Wojciech Herisz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WojtekHerisz/dazn-challenge/issues"
+  },
+  "homepage": "https://github.com/WojtekHerisz/dazn-challenge#readme"
+}
