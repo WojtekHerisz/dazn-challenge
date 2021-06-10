@@ -2,7 +2,7 @@
   "name": "dazn-challenge",
   "version": "1.0.0",
   "description": "Dazn Coding Challenge",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +19,15 @@
   "bugs": {
     "url": "https://github.com/WojtekHerisz/dazn-challenge/issues"
   },
-  "homepage": "https://github.com/WojtekHerisz/dazn-challenge#readme"
+  "homepage": "https://github.com/WojtekHerisz/dazn-challenge#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compress": "^0.99.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0"
+  }
 }
