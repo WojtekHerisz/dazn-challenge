@@ -45,12 +45,36 @@ It is really simple API which has 4 endpoints and 2 helper endpoints. All of the
 
 - POST /v1/session - creating a sessionId
 - GET /v1/session - gets info about created session
+
+Request body:
+
+```json
+{ "sessionId": "xxxxxxxxx" }
+```
+
 - POST /v1/stream - is increasing current stream counter and is not allowing to cross the limit of 3. If user will try to open 4th stream it will add new parameter **limitReached** set as true so the client may know that user reached the limit. The limit can be changed in .env. In future to the controller of this endpoint there could be added for example sending URL of video etc.
+
+Request body:
+
+```json
+{ "sessionId": "xxxxxxxxx" }
+```
+
 - DELETE /v1/stream - is decreasing of current stream counter.
+
+Request body:
+
+```json
+{ "sessionId": "xxxxxxxxx" }
+```
+
+\*_xxxxxxxxx - sessionId from POST /v1/session_
+
+The session is stored using node-cache. It is pretty reliable and fast solution but for bigger scale I would think of some non-relational DB.
 
 ---
 
-- GET /v1/docs - documentation of API. Can be viewed only if previously has been generated. Please see last step of **Installation**
+- GET /v1/doc - documentation of API. Can be viewed only if previously has been generated. Please see last step of **Installation**
 - GET /v1/status - just simple keepalive endpoint
 
 For the express.js boilerplate I used fragments of my favourite [boilerplate](https://github.com/danielfsousa/express-rest-boilerplate) which has few most important things to start such as _helmet_ for security, logging with _morgan_ and _winston_ etc.
