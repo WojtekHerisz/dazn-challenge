@@ -1,9 +1,10 @@
 const { port, env } = require("./config/vars");
+const logger = require("./config/logger");
 const app = require("./config/express");
 
 // listen to requests
 app.listen(port, () =>
-  console.log(`Server started on port ${port}. Current env is ${env}`)
+  logger.info(`Server started on port ${port}. Current env is ${env}`)
 );
 
 /**
